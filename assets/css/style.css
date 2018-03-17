@@ -7,12 +7,18 @@
     padding: 20px;
     font-family: korinna;
     font-weight: bold;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
 }
 #titleBox > span {
     font-family: murphy;
 }
 #titleBox > span > h2 {
     font-family: broadway;
+    font-weight: 600;
 }
 #alt {
     display: flex;
@@ -86,6 +92,11 @@
     font-size: 4em;
     font-family: murphy;
     font-weight: bolder;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
 }
 
 .app {
@@ -97,6 +108,7 @@
     font-family: korinna;
     overflow: hidden;
     width: 100vw;
+    
 }
 
 .mainContent {
