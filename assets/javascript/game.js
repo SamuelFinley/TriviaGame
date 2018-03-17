@@ -1,6 +1,6 @@
 $(document).ready(() => {
     const names = ['#button1', '#button2', '#button3', '#button4'];
-    const letters = ['A:', 'B:', 'C:', 'D:']
+    const letters = ['A: ', 'B: ', 'C: ', 'D: ']
     let n = 0;
     let num = 10;
     let time;
@@ -28,12 +28,12 @@ $(document).ready(() => {
         question: 'If you were in the city of Turin, what country would you be in?',
         answer: 'Italy',
         idx: 4,
-        choices: ['France', 'czech republic', 'Russia', 'Italy']
+        choices: ['France', 'Czech Republic', 'Russia', 'Italy']
     },{
         question: "What is the capital city of Canada's Yukon territory?",
         answer: 'Whitehorse',
         idx: 3,
-        choices: ['Greyhorse', 'Bluehorse', 'Whitehorse', 'Rainbowhorse']
+        choices: ['Greyhorse', 'Bluehorse', 'Whitehorse', 'horse']
     },{
         question: 'In our solar system, which planet has the shortest day?',
         answer: 'Jupiter',
@@ -43,7 +43,7 @@ $(document).ready(() => {
         question: 'The RMS Olympic and HMHS Britannic were sister ships to which other British passenger liner?',
         answer: 'RMS Titanic',
         idx: 1,
-        choices: ['RMS Titanic', 'uss constitution', 'rms lusitania', 'HMS Beagle']
+        choices: ['RMS Titanic', 'USS Constitution', 'RMS Lusitania', 'HMS Beagle']
     },{
         question: 'What was the name of the ship on which Charles Darwin served as a naturalist during a voyage to South America and around the world?',
         answer: 'HMS Beagle',
@@ -53,7 +53,7 @@ $(document).ready(() => {
         question: 'What was the first console video game that allowed the game to be saved?',
         answer: 'The Legend of Zelda',
         idx: 3,
-        choices: ['pacman', 'Mario', 'The Legend of Zelda', 'Doom']
+        choices: ['PAC-MAN', 'Mario Bros', 'The Legend of Zelda', 'Doom']
     },{
         question: 'Sriracha is type of hot sauce named after a city located in what country?',
         answer: 'Thailand',
@@ -119,7 +119,7 @@ $(document).ready(() => {
         $('.content').css('background-color', 'cornsilk');
         $('#question').html('Question ' + (n+1) + ': <br>' + trivial[n].question);
         for (i = 0; i < 4; i++) {
-            $(names[i]).html(trivial[n].choices[i]);
+            $(names[i]).html(letters[i] + trivial[n].choices[i]);
             $(names[i]).attr('value', trivial[n].choices[i]);
         }
         n++
