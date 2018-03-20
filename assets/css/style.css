@@ -1,3 +1,26 @@
+#alt {
+    display: flex;
+    align-content: center;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+}
+
+#question {
+    font-size: 1.5em;
+    text-align: center;
+    align-self: center;
+    margin-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#time {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 20px;
+}
+
 #titleBox {
     color: red;
     margin: auto;
@@ -13,19 +36,14 @@
     -2px 2px 0 #000,
     2px 2px 0 #000;
 }
+
 #titleBox > span {
     font-family: murphy;
 }
+
 #titleBox > span > h2 {
     font-family: broadway;
     font-weight: 600;
-}
-#alt {
-    display: flex;
-    align-content: center;
-    position: absolute;
-    top: 20%;
-    width: 100%;
 }
 
 .main {
@@ -33,21 +51,6 @@
     align-items: center;
 }
 
-#question {
-    font-size: 1.5em;
-    text-align: center;
-    align-self: center;
-    margin-top: 30px;
-}
-
-#time {
-    font-size: 1.5em;
-    text-align: center;
-    margin: 20px;
-}
-#reset {
-    margin-top: 10px;
-}
 .button {
     text-align: left;
     padding-left: 20px;
@@ -61,10 +64,14 @@
     min-width: 200px;
 }
 
+#button0 { 
+    margin-top: 50px;
+}
+
 .content {
     background-color: cornsilk;
     max-width: 980px;
-    min-height: 80%;
+    height: 90vh;
     margin: auto;
     margin-top: 30px;
     display: block;
@@ -102,7 +109,7 @@
 .app {
     background-image: url("../images/background.jpg");
     background-size: cover;
-    background-position: center 30%;
+    background-position: 20% 30%;
     position: relative;
     min-height: 100vh;
     font-family: korinna;
@@ -133,3 +140,46 @@
     font-family: broadway;
     src: url("../fonts/BroadwayEngravedCaps Regular.ttf");
 }
+ /* Media queries */
+ 
+   @media only screen and (max-width: 767px) {
+    #alt > h1 {
+        font-size: 2em;
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    }
+    #titleBox {
+        font-size: 1.5em;
+        padding: 10px;
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    }
+    .app {
+        background-position: 30% center;
+    }
+    .content {
+        margin: 15px;
+    }
+    #time {
+        font-size: 1em;
+        margin: 15px;
+    }
+    #question {
+        font-size: 1em;
+        margin-top: 15px;
+    }
+    .button {
+        font-size: 1em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .choices {
+        margin-top: 15px;
+    }
+   }
