@@ -64,6 +64,7 @@ $(document).ready(() => {
     window.onload = start ();
 
     function timerThing2 () {
+        console.log(n)
         if (trivial[n]) {
             $('.main').css('display', 'block');
             $('#alt').css('display', 'none');
@@ -76,6 +77,8 @@ $(document).ready(() => {
     function endGame () {
         $('.content').css('background-color', 'transparent');
         $('.content').css('border-color', 'transparent');
+        $('.main').css('display', 'none');
+        $('#alt').css('display', 'block');
         $('.app').css('background-image', 'url("./assets/images/background.jpg")');
         $('#alt > h1').html('You got ' + score.correct + ' correct and made ' + score.incorrect + ' happy little accidents!');
     }
@@ -111,6 +114,7 @@ $(document).ready(() => {
     }
 
     function nGame () {
+        $('.button').prop('disabled', false);
         num = 10;
         $('#time').html('Time Left: 10 seconds!');
         $('.pic').css('display', 'none')
@@ -150,6 +154,7 @@ $(document).ready(() => {
     })
 
     $('.button').click( function () {
+        $('.button').prop('disabled', true);
         window.clearInterval(time);
         ($(this).attr('value') === trivial[n-1].answer) ? (correct ()) : (wrong ());
     })
