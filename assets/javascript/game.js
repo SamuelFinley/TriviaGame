@@ -48,7 +48,7 @@ $(document).ready(() => {
         question: 'What was the name of the ship on which Charles Darwin served as a naturalist during a voyage to South America and around the world?',
         answer: 'HMS Beagle',
         idx: 4,
-        choices: ['RMS Titanic', 'uss constitution', 'rms lusitania', 'HMS Beagle']
+        choices: ['RMS Titanic', 'USS Constitution', 'RMS Lusitania', 'HMS Beagle']
     },{
         question: 'What was the first console video game that allowed the game to be saved?',
         answer: 'The Legend of Zelda',
