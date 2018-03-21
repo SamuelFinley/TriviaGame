@@ -64,16 +64,15 @@ $(document).ready(() => {
     window.onload = start ();
 
     function timerThing2 () {
-        console.log(n)
         if (trivial[n]) {
             $('.main').css('display', 'block');
             $('#alt').css('display', 'none');
             nGame ();
         } else {
-            endGame ()
+            endGame ();
         }
     }
-    $('#player, #opponent').attr('src', './assets/images/750161_game_512x512.png')
+
     function endGame () {
         $('.content').css('background-color', 'transparent');
         $('.content').css('border-color', 'transparent');
@@ -84,7 +83,7 @@ $(document).ready(() => {
     }
 
     function wrong () {
-        $('.pic').css('display', 'inline')
+        $('.pic').css('display', 'inline');
         $('.pic').attr('src', './assets/images/x.png');
         $('#pic' + trivial[n-1].idx).attr('src', './assets/images/check.png');
         score.incorrect++
@@ -117,7 +116,7 @@ $(document).ready(() => {
         $('.button').prop('disabled', false);
         num = 10;
         $('#time').html('Time Left: 10 seconds!');
-        $('.pic').css('display', 'none')
+        $('.pic').css('display', 'none');
         $('.content').css('border-color', 'red');
         $('.app').css('background-image', 'url("./assets/images/background.jpg")');
         $('.content').css('background-color', 'cornsilk');
@@ -139,8 +138,8 @@ $(document).ready(() => {
         num--
         if (num === 0) {
             num = 10;
-            window.clearInterval(time)
-            timeUp ()
+            window.clearInterval(time);
+            timeUp ();
         } else {
             $('#time').html('Time Left: ' + num + ' seconds!');
         }
